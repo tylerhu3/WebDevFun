@@ -1,0 +1,22 @@
+
+<%  include partials/header %>
+<div class ="container">
+    <header class= "jumbotron">
+        <div class = "container">
+            <h1>Galleria Universe</h1>
+                <p> Pictures In Space</p>
+                <p> <a class = "btn btn-primary btn-large" href="/pics/new" >Add New Pic</a></p>
+        </div>
+    </header>
+    <div class = "row text-center" style="display:flex; flex-wrap: wrap;">
+    <% data.forEach(function(item){ %>
+        <div class= "col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src=" <%= item.image %>">
+                    <div class = "caption"> <%= item.name %> </div>
+                </div>
+            </div>
+        <% })%>
+    </div>
+</div>
+<% include partials/footer %>

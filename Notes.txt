@@ -1,0 +1,18 @@
+For creating any Npm project:
+create a folder with that projects name
+terminal into dir:
+1. npm init
+##make sure "entry point" : app.js
+2. npm install express #Note this is the framework that writes our site, basically we just fill in the blanks from here
+3. write app.js with:
+ var express = require("express");
+ var app = express();
+
+ app.get("/", function(req, res){
+    res.send("This will be landing page soon!");
+    });
+
+//Required code for any of the above to work 
+app.listen(3000,  function () {
+    console.log('Webpage listening on port 3000, Time: ' + new Date());
+});
