@@ -1,13 +1,16 @@
+##### This is some notes from the yelp camp tutorial #####
+
 For creating any Npm project:
 create a folder with that projects name
 terminal into dir:
+
 1. npm init
 ##make sure "entry point" : app.js
 2. npm install express #Note this is the framework that writes our site, basically we just fill in the blanks from here
 3. write app.js with:
  var express = require("express");
  var app = express();
-
+ app.set("view engine", "ejs"); #makes writing js code in ejs files possible
  app.get("/", function(req, res){
     res.send("This will be landing page soon!");
     });
@@ -16,3 +19,39 @@ terminal into dir:
 app.listen(3000,  function () {
     console.log('Webpage listening on port 3000, Time: ' + new Date());
 });
+
+
+## in ejs files, we can do business logic with <%= JS Code %>
+
+#### Nodemon is a node package that restarts the node server whenever we make changes and save to a
+#### file within that node folder
+1.npm install nodemon -g   #install 
+2.run on terminal "nodemon app.js" 
+
+
+Explanation of how express apps work.
+1. After creating a npm project, we generally create a var call app = express();
+which basically is basically fill in the blank in app.js from here on out
+
+2. for each app.get() function we call, the first parameter is the sublink of the website
+for each example, if we have app.get("/blog") and our website was tyler.com, this would imply
+that the user is trying to access tyler.com/blog and essentially, we need to return something.
+The second paramter of app.get() is where we would return something.
+An example of this is 
+
+app.get("/blog", function (req, res) {
+ res.render("blog.ejs",  {blogs: blogs}) 
+	}
+)
+
+In this function, we are returning a ejs file to the user call blog.ejs which is basically
+html, css, and js all smashed into 1 file, and we are also passing in the blogs variable
+for blog.ejs to use
+
+-Also note the two paramters req and res. req is what the user is passing in and res is what
+we are returning to the user
+
+
+HTTP conventions:
+POST : submits data to be processed
+GET: requests data, should have no side effects
