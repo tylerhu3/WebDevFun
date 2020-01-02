@@ -1,5 +1,8 @@
 ##### This is some notes from the yelp camp tutorial #####
 
+
+Currently on: 6. YelpCamp Styling Nav and Forms.mp4
+
 For creating any Npm project:
 create a folder with that projects name
 terminal into dir:
