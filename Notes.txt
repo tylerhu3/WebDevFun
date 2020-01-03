@@ -1,7 +1,6 @@
+Currently on : 4. Yelp Camp Campground Show Page Part 2.mp4
+
 ##### This is some notes from the yelp camp tutorial #####
-
-
-Currently on: 6. YelpCamp Styling Nav and Forms.mp4
 
 For creating any Npm project:
 create a folder with that projects name
@@ -58,3 +57,12 @@ we are returning to the user
 HTTP conventions:
 POST : submits data to be processed
 GET: requests data, should have no side effects
+
+MONGODB Shell Help
+--------------------
+1.show dbs - shows all data base we have in app
+2.use db_name - use the database we have specified
+3.show collections - show all tables we have in here
+4.db.nameOfTable.find() - shows all entries in table
+5.db.nameOfTable.drop() - drops all entires in table
+ 
